@@ -16,4 +16,12 @@ Rails.application.routes.draw do
   post("/insert_director", {:controller => "add", :action => "add_director"})
   post("/insert_movie", {:controller => "add", :action => "add_movie"})
   post("/insert_actor", {:controller => "add", :action => "add_actor"})
+
+  post("/delete_actor/:actor_id", {:controller => "delete", :action => "delete_actor"})
+  post("/delete_director/:director_id", {:controller => "delete", :action => "delete_director"})
+  post("/delete_movie/:movie_id", {:controller => "delete", :action => "delete_movie"})
+
+  post("modify_actor/:actor_id", {:controller => "modify", :action => "modify_actor"})
+  post("modify_director/:director_id", {:controller => "modify", :action => "modify_director"})
+  post("modify_movie/:movie_id", {:controller => "modify", :action => "modify_movie"})
 end
