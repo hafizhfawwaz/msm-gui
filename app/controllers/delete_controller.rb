@@ -2,9 +2,9 @@ class DeleteController < ApplicationController
   def delete_director
 
     @dir_id = params.fetch("path_id")
-    @dir_x = Director.where({:id => @dir_id}).first
+    @dir_y = Director.where({:id => @dir_id}).at(0)
 
-    @dir_x.destroy
+    @dir_y.destroy
 
     redirect_to("/directors")
 
@@ -13,9 +13,9 @@ class DeleteController < ApplicationController
   def delete_movie
 
     @mov_id = params.fetch("path_id")
-    @mov_x = Movie.where({:id => @mov_id}).first
+    @mov_y = Movie.where({:id => @mov_id}).at(0)
 
-    @mov_x.destroy
+    @mov_y.destroy
 
     redirect_to("/movies")
 
@@ -24,9 +24,9 @@ class DeleteController < ApplicationController
   def delete_actor
 
     @act_id = params.fetch("path_id")
-    @act_x = Actor.where({:id => @act_id}).first
+    @act_y = Actor.where({:id => @act_id}).at(0)
 
-    @act_x.destroy
+    @act_y.destroy
 
     redirect_to("/actors")
 
