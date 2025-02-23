@@ -1,7 +1,7 @@
 class ModifyController < ApplicationController
   def modify_director
 
-    @dir_id = params.fetch("director_id")
+    @dir_id = params.fetch("path_id")
     
     @dir_name = params.fetch("query_name")
     @dir_dob = params.fetch("query_dob")
@@ -22,7 +22,7 @@ class ModifyController < ApplicationController
 
   def modify_movie
 
-    @mov_id = params.fetch("movie_id")
+    @mov_id = params.fetch("path_id")
 
     @mov_title = params.fetch("query_title")
     @mov_year = params.fetch("query_year")
@@ -48,7 +48,7 @@ class ModifyController < ApplicationController
 
   def modify_actor
 
-    @act_id = params.fetch("actor_id")
+    @act_id = params.fetch("path_id")
 
     @act_name = params.fetch("query_name")
     @act_dob = params.fetch("query_dob")
